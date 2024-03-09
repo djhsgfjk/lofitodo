@@ -7,7 +7,7 @@ module.exports = {
         bundle: path.resolve(__dirname, 'src\/scripts\/index.js'),
     },
     output: {
-        path: path.resolve(__dirname, 'dev'),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
         clean: true,
     },
@@ -16,7 +16,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|jpg)$/i,
-                type: 'asset/resource',
+                type: 'asset/resource'
                 
             },
             { test: /\.css$/, use: ['style-loader', 'css-loader']},
@@ -35,9 +35,9 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             title: 'LofiTodo',
-            favicon: path.resolve(__dirname, 'src/assets/logo.svg'),
-            filename: 'template.html',
-            template: path.resolve(__dirname, 'src/\template.html'),
+            favicon: path.resolve(__dirname, 'src\/assets\/favicon.png'),
+            filename: 'index.html',
+            template: path.resolve(__dirname, 'src\/template.html'),
         }),
     ],
 };
